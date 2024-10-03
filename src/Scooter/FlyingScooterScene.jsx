@@ -41,12 +41,14 @@ const FlyingScooterScene = () => {
         {/* Lighting */}
         <ambientLight intensity={0.3} />
         <directionalLight
+          castShadow
+          shadow-bias={-0.0001}
           position={[5, 10, 5]}
           intensity={1}
-          castShadow
-          shadow-mapSize-width={1024}
+          shadow-mapSize-width={1024} // Increase resolution for better shadows
           shadow-mapSize-height={1024}
           shadow-camera-far={50}
+          shadow-camera-near={1}
           shadow-camera-left={-10}
           shadow-camera-right={10}
           shadow-camera-top={10}
